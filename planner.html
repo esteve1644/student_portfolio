@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Academic Planner | Student Portfolio</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Animated Background -->
+
+<div class="background-blobs">
+
+<div class="blob one"></div>
+
+<div class="blob two"></div>
+
+<div class="blob three"></div>
+
+</div>
+
+<!-- Navigation -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<h2>MyPortfolio</h2>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="projects.html">Projects</a></li>
+
+<li><a class="active" href="planner.html">Academic Planner</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<div class="menu-btn">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- Page Title -->
+
+<section class="page-title">
+
+<h1>Academic Planner</h1>
+
+<p>
+
+Stay productive, organize your coursework, manage deadlines,
+and keep track of your academic journey.
+
+</p>
+
+</section>
+
+<!-- Planner -->
+
+<section class="planner-container">
+
+<!-- Left Side -->
+
+<div class="dashboard-card">
+
+<h2>
+
+<i class="fas fa-chart-pie"></i>
+
+Planner Dashboard
+
+</h2>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+
+<h3 id="totalTasks">0</h3>
+
+<p>Total Tasks</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3 id="completedTasks">0</h3>
+
+<p>Completed</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3 id="pendingTasks">0</h3>
+
+<p>Pending</p>
+
+</div>
+
+</div>
+
+<hr style="margin:25px 0; border:none; height:1px; background:#ddd;">
+
+<h2>
+
+<i class="fas fa-plus-circle"></i>
+
+Add New Task
+
+</h2>
+
+<div class="task-form">
+
+<input
+
+type="text"
+
+id="taskInput"
+
+placeholder="Enter task title">
+
+<input
+
+type="date"
+
+id="taskDate">
+
+<select id="taskPriority">
+
+<option value="High">High Priority</option>
+
+<option value="Medium" selected>
+
+Medium Priority
+
+</option>
+
+<option value="Low">
+
+Low Priority
+
+</option>
+
+</select>
+
+<button
+
+class="btn"
+
+id="addTask">
+
+<i class="fas fa-plus"></i>
+
+Add Task
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Right Side -->
+
+<div class="task-area">
+
+<h2>
+
+<i class="fas fa-list-check"></i>
+
+My Tasks
+
+</h2>
+
+<div class="search-box">
+
+<input
+
+type="text"
+
+id="searchTask"
+
+placeholder="Search tasks...">
+
+</div>
+
+<ul id="taskList">
+
+</ul>
+
+<div id="emptyState">
+
+<i class="fas fa-book-open"></i>
+
+<h3>No Tasks Yet</h3>
+
+<p>
+
+Start adding your academic tasks to stay organized.
+
+</p>
+
+</div>
+
+<div class="planner-actions">
+
+<button
+
+id="clearCompleted"
+
+class="btn">
+
+<i class="fas fa-check"></i>
+
+Clear Completed
+
+</button>
+
+<button
+
+id="clearAll"
+
+class="btn-outline">
+
+<i class="fas fa-trash"></i>
+
+Delete All
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Weekly Goals -->
+
+<section class="goals-section">
+
+<h2>
+
+Weekly Academic Goals
+
+</h2>
+
+<div class="goals-grid">
+
+<div class="goal-card">
+
+<h3>
+
+<i class="fas fa-book"></i>
+
+Study Hours
+
+</h3>
+
+<p>
+
+Complete at least 20 hours of focused study this week.
+
+</p>
+
+</div>
+
+<div class="goal-card">
+
+<h3>
+
+<i class="fas fa-laptop-code"></i>
+
+Coding Practice
+
+</h3>
+
+<p>
+
+Build one JavaScript mini-project and revise HTML & CSS.
+
+</p>
+
+</div>
+
+<div class="goal-card">
+
+<h3>
+
+<i class="fas fa-file-alt"></i>
+
+Assignments
+
+</h3>
+
+<p>
+
+Finish all pending assignments before Friday.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Study Tips -->
+
+<section class="study-tips">
+
+    <h2>Smart Study Tips</h2>
+
+    <div class="tip-grid">
+
+        <div class="tip-card">
+
+            <i class="fas fa-clock"></i>
+
+            <h3>Time Management</h3>
+
+            <p>
+                Break large assignments into smaller tasks and follow a daily
+                study schedule to avoid last-minute pressure.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <i class="fas fa-brain"></i>
+
+            <h3>Practice Regularly</h3>
+
+            <p>
+                Coding and revision become easier when practiced consistently
+                instead of only before examinations.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <i class="fas fa-users"></i>
+
+            <h3>Group Discussions</h3>
+
+            <p>
+                Collaborate with classmates to exchange ideas and strengthen
+                your understanding of difficult topics.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <i class="fas fa-bullseye"></i>
+
+            <h3>Stay Focused</h3>
+
+            <p>
+                Remove distractions while studying and set achievable goals
+                for every study session.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Upcoming Deadlines -->
+
+<section class="academic-record">
+
+    <h2>Upcoming Academic Schedule</h2>
+
+    <div class="academic-table">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Course</th>
+
+                    <th>Task</th>
+
+                    <th>Due Date</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Web Development</td>
+
+                    <td>Portfolio Website</td>
+
+                    <td>July 20</td>
+
+                    <td>In Progress</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Java Programming</td>
+
+                    <td>OOP Assignment</td>
+
+                    <td>July 24</td>
+
+                    <td>Pending</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Database Systems</td>
+
+                    <td>ER Diagram Project</td>
+
+                    <td>July 28</td>
+
+                    <td>Not Started</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Computer Networks</td>
+
+                    <td>Research Presentation</td>
+
+                    <td>August 1</td>
+
+                    <td>Planning</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- Motivation -->
+
+<section class="bio">
+
+    <h2>Daily Motivation</h2>
+
+    <p>
+
+        Success in academics is not determined by how many hours you study,
+        but by how consistently you improve yourself every day.
+        Stay disciplined, stay curious, and never stop learning.
+
+    </p>
+
+</section>
+
+<!-- Study Video -->
+
+<section class="video">
+
+    <h2>Study Motivation</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/g6BtbIiJ_rc?si=_usnn__svapp-ipI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>Esther Steve Job</h2>
+
+        <p>
+            Data Science Student
+        </p>
+
+        <div class="socials">
+
+            <a href="https://github.com/esteve1644"><i class="fab fa-github"></i></a>
+
+            <a href="/coming-soon.html"><i class="fab fa-linkedin"></i></a>
+
+            <a href="/coming-soon.html"><i class="fab fa-youtube"></i></a>
+
+            <a href="/coming-soon.html"><i class="fab fa-instagram"></i></a>
+
+        </div>
+
+        <p>
+
+            © 2026 Esther's Portfolio | All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- Mobile Menu -->
+
+<script>
+
+const menu = document.querySelector(".menu-btn");
+
+const nav = document.querySelector(".nav-links");
+
+menu.onclick = () => {
+
+    nav.classList.toggle("show");
+
+};
+
+</script>
+
+<!-- JavaScript -->
+
+<script src="js/planner.js"></script>
+
+</body>
+
+</html>
+
